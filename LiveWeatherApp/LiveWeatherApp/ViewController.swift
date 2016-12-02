@@ -10,7 +10,11 @@ import UIKit
 
 class ViewController: UITableViewController {
 
+    //TEST ARRAYS-----------------------------------------------
     var cv_zipCode: [String] = ["48197", "85365", "99703"]
+    var cv_cityName: [String] = ["Ypsilanti", "Yuma", "Fort Wainwright"]
+    var cv_state: [String] = ["MI", "AZ", "AK"]
+    var cv_temp: [String] = ["55", "75", "34"]
     
     
     override func viewDidLoad() {
@@ -30,9 +34,13 @@ class ViewController: UITableViewController {
     
     //Info to be displayed for each cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "weatherInfoCell")! as UITableViewCell
+        let cell:WeatherViewCell = self.tableView.dequeueReusableCell(withIdentifier: "weatherInfoCell")! as! WeatherViewCell
         
-        cell.textLabel?.text = self.cv_zipCode[(indexPath as NSIndexPath).row]
+        cell.vv_lblCityName?.text = self.cv_cityName[(indexPath as NSIndexPath).row]
+        cell.vv_lblZipCode?.text = self.cv_zipCode[(indexPath as NSIndexPath).row]
+        cell.vv_lblState?.text = self.cv_state[(indexPath as NSIndexPath).row]
+        cell.vv_lblTemp?.text = self.cv_temp[(indexPath as NSIndexPath).row] + "\u{00B0}"
+        
         return cell
     }
     

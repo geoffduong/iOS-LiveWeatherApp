@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D21BCBC41DF1E05A00033146 /* WeatherViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21BCBC31DF1E05A00033146 /* WeatherViewCell.swift */; };
 		D2AAA8681DEE437F00EF9841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AAA8671DEE437F00EF9841 /* AppDelegate.swift */; };
 		D2AAA86A1DEE437F00EF9841 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AAA8691DEE437F00EF9841 /* ViewController.swift */; };
 		D2AAA86D1DEE437F00EF9841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AAA86B1DEE437F00EF9841 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D21BCBC31DF1E05A00033146 /* WeatherViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewCell.swift; sourceTree = "<group>"; };
 		D2AAA8641DEE437F00EF9841 /* LiveWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AAA8671DEE437F00EF9841 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2AAA8691DEE437F00EF9841 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				D2AAA86E1DEE437F00EF9841 /* Assets.xcassets */,
 				D2AAA8701DEE437F00EF9841 /* LaunchScreen.storyboard */,
 				D2AAA8731DEE437F00EF9841 /* Info.plist */,
+				D21BCBC31DF1E05A00033146 /* WeatherViewCell.swift */,
 			);
 			path = LiveWeatherApp;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D21BCBC41DF1E05A00033146 /* WeatherViewCell.swift in Sources */,
 				D2AAA86A1DEE437F00EF9841 /* ViewController.swift in Sources */,
 				D2AAA8681DEE437F00EF9841 /* AppDelegate.swift in Sources */,
 			);
@@ -302,6 +306,7 @@
 				D2AAA8781DEE437F00EF9841 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
