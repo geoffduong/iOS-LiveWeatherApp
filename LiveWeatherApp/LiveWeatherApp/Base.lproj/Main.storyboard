@@ -84,16 +84,16 @@
             </objects>
             <point key="canvasLocation" x="1944.375" y="145.77464788732394"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Zip View Controller-->
         <scene sceneID="442-NX-4oz">
             <objects>
-                <viewController id="ZoJ-cc-Qka" sceneMemberID="viewController">
+                <viewController id="ZoJ-cc-Qka" customClass="AddZipViewController" customModule="LiveWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LlA-8w-Kdc"/>
                         <viewControllerLayoutGuide type="bottom" id="O4i-9i-EFP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lhq-5N-ZVd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add City By Zip Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sGl-47-vdL">
@@ -109,11 +109,25 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="verifyZipAndSend:" destination="ZoJ-cc-Qka" eventType="primaryActionTriggered" id="qRs-RE-glK"/>
+                                </connections>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Validation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dv1-gW-F5u">
+                                <rect key="frame" x="16" y="122" width="288" height="117"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="vv_lblResult" destination="dv1-gW-F5u" id="SfS-Y4-PG3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bc9-cf-2Dw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
