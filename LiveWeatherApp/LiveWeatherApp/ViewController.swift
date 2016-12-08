@@ -7,14 +7,19 @@
 //
 
 import UIKit
+import SQLite
 
 class ViewController: UITableViewController {
+    
+    //DATABASE--------------------------------------------------
+    //let db = try Connection(":zipCode.db") throws -> String
 
     //TEST ARRAYS-----------------------------------------------
     var cv_zipCode: [String] = ["48197", "85365", "99703"]
     var cv_cityName: [String] = ["Ypsilanti", "Yuma", "Fort Wainwright"]
     var cv_state: [String] = ["MI", "AZ", "AK"]
     var cv_temp: [String] = ["55", "75", "34"]
+    
     
     
     override func viewDidLoad() {

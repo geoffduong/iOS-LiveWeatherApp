@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0003EB38B2D24C6C635591210DE3411F /* Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4290E5E4E6E470B73A03DC68DD88CD9E /* Schema.swift */; };
+		003997D2FD4A618BA52953EDF5BB2386 /* SQLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 04E6F12FD0FFEC76381897F60F851C55 /* SQLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C6DA3BDA37284356C66390AEAFB75AD /* Blob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266844878F19EAB4387099A76849ECD3 /* Blob.swift */; };
+		1EDFFA5942979332C1A3469DDA7F27C6 /* Pods-LiveWeatherApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF580A11B0FB9142E55E036FB4782CEE /* Pods-LiveWeatherApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21391033E67F753D123644674C2432E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		2159CA5F7E96E5634B62FB42809C07CE /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE86704CE3F1D8A13BB49B8194E3671 /* Connection.swift */; };
+		27A60F73DCEC01BEFEB780E016160310 /* FTS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178057F5C43F2ACC4C49848D76C84F39 /* FTS5.swift */; };
+		32D3672C5698EB56F5B7BD282193765B /* FTS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA74B3866E5522C8AB781CEDC773F7B5 /* FTS4.swift */; };
+		34C1A708ACDB3BC91B9C0A022D2E3731 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECF1DDA6B0BD2DD467D808A60E9F1DF /* Expression.swift */; };
+		3668097F38C50A4A7F5160BCA265B793 /* SQLite.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D30459F9DC30876AF6C299D26C7CE48 /* SQLite.swift-dummy.m */; };
+		505F58AC4BB37400BCC00B842B3F83EE /* fts3_tokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 23EE883AEF75DDCE315139B1712AE7E4 /* fts3_tokenizer.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		578A546F6667598B1F190451AAC69989 /* CoreFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5FDF597669EB9F2DEBC2B10CABA29B /* CoreFunctions.swift */; };
+		6DDD0DE1C7045E692BE1C6E97110597E /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 874DE57D889775E450F967975025117A /* Value.swift */; };
+		7018BF44B3059DAD6DEF807DC4F6AB41 /* Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854100A840FDC83157E8EC44139E6D5D /* Statement.swift */; };
+		76F27712AE4DDF91AF420A2AF687C2ED /* CustomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AEDDB16A108F8A5678B834709F6C54 /* CustomFunctions.swift */; };
+		8E30A801992034262A25DF128551E031 /* Collation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAE9A4B83B4818DA5E6B7276A73F83F /* Collation.swift */; };
+		910936AEEC0D8F0ECDE5C9BD32AAC20F /* AggregateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E98AA8FBEBF8957FDB3434B04A5D0E /* AggregateFunctions.swift */; };
+		A0C00349751E399ED7D21709C91CD8A5 /* SQLite-Bridging.m in Sources */ = {isa = PBXBuildFile; fileRef = C73679C1F897100C8A7D8F6F95068EB5 /* SQLite-Bridging.m */; };
+		A816F7064B3C7C338375310C29A9F602 /* SQLite.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27B2D491F0A9B062233011B873DC118C /* SQLite.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9E2F5CFAFFDA18F52D1536966DCB2AD /* RTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8083AC04868D927E90A32115E3A15B8 /* RTree.swift */; };
+		C225E65F5C197B3AF64137E65DBA3518 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D630909FC3716CAC500B775CB317BD5 /* Query.swift */; };
+		C6CC99F22D7E235B621A3DA051BA2298 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625A8934FFD973B70CC26038CE9528FE /* Helpers.swift */; };
+		D4932EE0184834B0CCA1B9CDD42B62D2 /* Setter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 784E8EF8182D21D43569BC89F4C8FF07 /* Setter.swift */; };
+		D758C4C2535DAD3505863CDFD8720701 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		D7E079A5D34F8EE52CBA9DCB3B40610E /* SQLite-Bridging.h in Headers */ = {isa = PBXBuildFile; fileRef = AC32DD8855E7E50DAFB77C681228C3DC /* SQLite-Bridging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9A96807652FBC899936F71F0A27E9CB /* Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018C59B9F728D09E41CC17F01F135850 /* Foundation.swift */; };
+		DB06F980C316E64832F3E084DE888A49 /* Pods-LiveWeatherApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 961F0D33FBDB912271E54E6AD1A74E98 /* Pods-LiveWeatherApp-dummy.m */; };
+		E50F9CDF5CBF2F0CD6C9FA37019E6F10 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA98ACB1CD546E2ECEA1AC833E86B078 /* Operators.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3A55D889FAEB64C5635FD082AA23928 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E66769F71A518C244BA813F15140A072;
+			remoteInfo = SQLite.swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		018C59B9F728D09E41CC17F01F135850 /* Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Foundation.swift; path = SQLite/Foundation.swift; sourceTree = "<group>"; };
+		04E6F12FD0FFEC76381897F60F851C55 /* SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = SQLite/SQLite.h; sourceTree = "<group>"; };
+		178057F5C43F2ACC4C49848D76C84F39 /* FTS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5.swift; path = SQLite/Extensions/FTS5.swift; sourceTree = "<group>"; };
+		19E98AA8FBEBF8957FDB3434B04A5D0E /* AggregateFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AggregateFunctions.swift; path = SQLite/Typed/AggregateFunctions.swift; sourceTree = "<group>"; };
+		1D7DA9FB08FD2A913967F0D7996B8701 /* SQLite.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SQLite.swift.modulemap; sourceTree = "<group>"; };
+		1EC3C1E6C3B57B46326B94BAB568B649 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23EE883AEF75DDCE315139B1712AE7E4 /* fts3_tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = SQLite/Core/fts3_tokenizer.h; sourceTree = "<group>"; };
+		266844878F19EAB4387099A76849ECD3 /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = SQLite/Core/Blob.swift; sourceTree = "<group>"; };
+		27B2D491F0A9B062233011B873DC118C /* SQLite.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-umbrella.h"; sourceTree = "<group>"; };
+		2D30459F9DC30876AF6C299D26C7CE48 /* SQLite.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLite.swift-dummy.m"; sourceTree = "<group>"; };
+		3D630909FC3716CAC500B775CB317BD5 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Query.swift; path = SQLite/Typed/Query.swift; sourceTree = "<group>"; };
+		4290E5E4E6E470B73A03DC68DD88CD9E /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = SQLite/Typed/Schema.swift; sourceTree = "<group>"; };
+		5E5FDF597669EB9F2DEBC2B10CABA29B /* CoreFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = SQLite/Typed/CoreFunctions.swift; sourceTree = "<group>"; };
+		625A8934FFD973B70CC26038CE9528FE /* Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Helpers.swift; path = SQLite/Helpers.swift; sourceTree = "<group>"; };
+		6385020CC1C59027CB0324085E85C107 /* Pods-LiveWeatherApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LiveWeatherApp-resources.sh"; sourceTree = "<group>"; };
+		784E8EF8182D21D43569BC89F4C8FF07 /* Setter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = SQLite/Typed/Setter.swift; sourceTree = "<group>"; };
+		854100A840FDC83157E8EC44139E6D5D /* Statement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Statement.swift; path = SQLite/Core/Statement.swift; sourceTree = "<group>"; };
+		874DE57D889775E450F967975025117A /* Value.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Value.swift; path = SQLite/Core/Value.swift; sourceTree = "<group>"; };
+		88BFCDC2C48A9AAC024D78C7786357F9 /* SQLite.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLite.swift.xcconfig; sourceTree = "<group>"; };
+		896A6F8B40C121F08CD4C63AA1270741 /* Pods-LiveWeatherApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LiveWeatherApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		961F0D33FBDB912271E54E6AD1A74E98 /* Pods-LiveWeatherApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LiveWeatherApp-dummy.m"; sourceTree = "<group>"; };
+		A59781E60B2815D0145D830A11F41965 /* Pods_LiveWeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_LiveWeatherApp.framework; path = "Pods-LiveWeatherApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABB016CB45789E8FD83FAFFD66A82F4A /* Pods-LiveWeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LiveWeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AC32DD8855E7E50DAFB77C681228C3DC /* SQLite-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite-Bridging.h"; path = "SQLite/Core/SQLite-Bridging.h"; sourceTree = "<group>"; };
+		ADF23D55A3D3232903BE2DFE5B762CA4 /* Pods-LiveWeatherApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LiveWeatherApp-frameworks.sh"; sourceTree = "<group>"; };
+		AEE86704CE3F1D8A13BB49B8194E3671 /* Connection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Connection.swift; path = SQLite/Core/Connection.swift; sourceTree = "<group>"; };
+		B7DDF8E14D301040E89EFB7B32A712FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA74B3866E5522C8AB781CEDC773F7B5 /* FTS4.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = SQLite/Extensions/FTS4.swift; sourceTree = "<group>"; };
+		BDAE9A4B83B4818DA5E6B7276A73F83F /* Collation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Collation.swift; path = SQLite/Typed/Collation.swift; sourceTree = "<group>"; };
+		BF580A11B0FB9142E55E036FB4782CEE /* Pods-LiveWeatherApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LiveWeatherApp-umbrella.h"; sourceTree = "<group>"; };
+		C73679C1F897100C8A7D8F6F95068EB5 /* SQLite-Bridging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SQLite-Bridging.m"; path = "SQLite/Core/SQLite-Bridging.m"; sourceTree = "<group>"; };
+		C8426B07C716BB8991354966C45BCD7B /* Pods-LiveWeatherApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LiveWeatherApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		C9E2A41F42AC4F6896C45F3D52B90EB1 /* Pods-LiveWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LiveWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
+		CA3ED8D54211455DE25A4DA036694445 /* SQLite.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-prefix.pch"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E7B3E27A4F955655C1C9CAEAC27C7998 /* Pods-LiveWeatherApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-LiveWeatherApp.modulemap"; sourceTree = "<group>"; };
+		E8083AC04868D927E90A32115E3A15B8 /* RTree.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RTree.swift; path = SQLite/Extensions/RTree.swift; sourceTree = "<group>"; };
+		E98DFC0A155BB0E2867F8F348185AEF6 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SQLite.framework; path = SQLite.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA98ACB1CD546E2ECEA1AC833E86B078 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = SQLite/Typed/Operators.swift; sourceTree = "<group>"; };
+		F5AEDDB16A108F8A5678B834709F6C54 /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = SQLite/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
+		FECF1DDA6B0BD2DD467D808A60E9F1DF /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = SQLite/Typed/Expression.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		02ACCE74C36122E19964342853183C8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D758C4C2535DAD3505863CDFD8720701 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF8726932D9C8E3A9173DF8349B1AD88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21391033E67F753D123644674C2432E2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CE5F9160B067C829D364E72878D0583 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1EC3C1E6C3B57B46326B94BAB568B649 /* Info.plist */,
+				1D7DA9FB08FD2A913967F0D7996B8701 /* SQLite.swift.modulemap */,
+				88BFCDC2C48A9AAC024D78C7786357F9 /* SQLite.swift.xcconfig */,
+				2D30459F9DC30876AF6C299D26C7CE48 /* SQLite.swift-dummy.m */,
+				CA3ED8D54211455DE25A4DA036694445 /* SQLite.swift-prefix.pch */,
+				27B2D491F0A9B062233011B873DC118C /* SQLite.swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SQLite.swift";
+			sourceTree = "<group>";
+		};
+		42A565AFFAD6D5669C3E9A617B18206F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BF538A5818A9423DCAFBA3FE993650B /* SQLite.swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		564C6594E1D16B90EBB3715F0851949E /* Pods-LiveWeatherApp */ = {
+			isa = PBXGroup;
+			children = (
+				B7DDF8E14D301040E89EFB7B32A712FF /* Info.plist */,
+				E7B3E27A4F955655C1C9CAEAC27C7998 /* Pods-LiveWeatherApp.modulemap */,
+				896A6F8B40C121F08CD4C63AA1270741 /* Pods-LiveWeatherApp-acknowledgements.markdown */,
+				C8426B07C716BB8991354966C45BCD7B /* Pods-LiveWeatherApp-acknowledgements.plist */,
+				961F0D33FBDB912271E54E6AD1A74E98 /* Pods-LiveWeatherApp-dummy.m */,
+				ADF23D55A3D3232903BE2DFE5B762CA4 /* Pods-LiveWeatherApp-frameworks.sh */,
+				6385020CC1C59027CB0324085E85C107 /* Pods-LiveWeatherApp-resources.sh */,
+				BF580A11B0FB9142E55E036FB4782CEE /* Pods-LiveWeatherApp-umbrella.h */,
+				ABB016CB45789E8FD83FAFFD66A82F4A /* Pods-LiveWeatherApp.debug.xcconfig */,
+				C9E2A41F42AC4F6896C45F3D52B90EB1 /* Pods-LiveWeatherApp.release.xcconfig */,
+			);
+			name = "Pods-LiveWeatherApp";
+			path = "Target Support Files/Pods-LiveWeatherApp";
+			sourceTree = "<group>";
+		};
+		63FF7C686861C090B590243E3B3E4BA0 /* standard */ = {
+			isa = PBXGroup;
+			children = (
+				19E98AA8FBEBF8957FDB3434B04A5D0E /* AggregateFunctions.swift */,
+				266844878F19EAB4387099A76849ECD3 /* Blob.swift */,
+				BDAE9A4B83B4818DA5E6B7276A73F83F /* Collation.swift */,
+				AEE86704CE3F1D8A13BB49B8194E3671 /* Connection.swift */,
+				5E5FDF597669EB9F2DEBC2B10CABA29B /* CoreFunctions.swift */,
+				F5AEDDB16A108F8A5678B834709F6C54 /* CustomFunctions.swift */,
+				FECF1DDA6B0BD2DD467D808A60E9F1DF /* Expression.swift */,
+				018C59B9F728D09E41CC17F01F135850 /* Foundation.swift */,
+				23EE883AEF75DDCE315139B1712AE7E4 /* fts3_tokenizer.h */,
+				BA74B3866E5522C8AB781CEDC773F7B5 /* FTS4.swift */,
+				178057F5C43F2ACC4C49848D76C84F39 /* FTS5.swift */,
+				625A8934FFD973B70CC26038CE9528FE /* Helpers.swift */,
+				EA98ACB1CD546E2ECEA1AC833E86B078 /* Operators.swift */,
+				3D630909FC3716CAC500B775CB317BD5 /* Query.swift */,
+				E8083AC04868D927E90A32115E3A15B8 /* RTree.swift */,
+				4290E5E4E6E470B73A03DC68DD88CD9E /* Schema.swift */,
+				784E8EF8182D21D43569BC89F4C8FF07 /* Setter.swift */,
+				04E6F12FD0FFEC76381897F60F851C55 /* SQLite.h */,
+				AC32DD8855E7E50DAFB77C681228C3DC /* SQLite-Bridging.h */,
+				C73679C1F897100C8A7D8F6F95068EB5 /* SQLite-Bridging.m */,
+				854100A840FDC83157E8EC44139E6D5D /* Statement.swift */,
+				874DE57D889775E450F967975025117A /* Value.swift */,
+			);
+			name = standard;
+			sourceTree = "<group>";
+		};
+		69B4198CCB52A09D7A5178C0614E6157 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A59781E60B2815D0145D830A11F41965 /* Pods_LiveWeatherApp.framework */,
+				E98DFC0A155BB0E2867F8F348185AEF6 /* SQLite.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BF538A5818A9423DCAFBA3FE993650B /* SQLite.swift */ = {
+			isa = PBXGroup;
+			children = (
+				63FF7C686861C090B590243E3B3E4BA0 /* standard */,
+				0CE5F9160B067C829D364E72878D0583 /* Support Files */,
+			);
+			name = SQLite.swift;
+			path = SQLite.swift;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				42A565AFFAD6D5669C3E9A617B18206F /* Pods */,
+				69B4198CCB52A09D7A5178C0614E6157 /* Products */,
+				9706B1C204A5D565B87DA20269C79F3B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9706B1C204A5D565B87DA20269C79F3B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				564C6594E1D16B90EBB3715F0851949E /* Pods-LiveWeatherApp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		768A37FADAE9B515382FD4250A6EF5C8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				505F58AC4BB37400BCC00B842B3F83EE /* fts3_tokenizer.h in Headers */,
+				D7E079A5D34F8EE52CBA9DCB3B40610E /* SQLite-Bridging.h in Headers */,
+				003997D2FD4A618BA52953EDF5BB2386 /* SQLite.h in Headers */,
+				A816F7064B3C7C338375310C29A9F602 /* SQLite.swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC52876FBA6121BA33F775F44BEF836 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EDFFA5942979332C1A3469DDA7F27C6 /* Pods-LiveWeatherApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1A54B93D00F81B6EB5E660FD70945036 /* Pods-LiveWeatherApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6682837B6500E5800B693BA4824D57BB /* Build configuration list for PBXNativeTarget "Pods-LiveWeatherApp" */;
+			buildPhases = (
+				6B48E6E0CF8D9E9E702E133D46AA18F8 /* Sources */,
+				FF8726932D9C8E3A9173DF8349B1AD88 /* Frameworks */,
+				FCC52876FBA6121BA33F775F44BEF836 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9CDF6290635448BAF0DE0FE8448CC38 /* PBXTargetDependency */,
+			);
+			name = "Pods-LiveWeatherApp";
+			productName = "Pods-LiveWeatherApp";
+			productReference = A59781E60B2815D0145D830A11F41965 /* Pods_LiveWeatherApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E66769F71A518C244BA813F15140A072 /* SQLite.swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95C22F500C6F3CCA50D677F54313CB01 /* Build configuration list for PBXNativeTarget "SQLite.swift" */;
+			buildPhases = (
+				0E7AE97D8934995865DAD45C50439170 /* Sources */,
+				02ACCE74C36122E19964342853183C8D /* Frameworks */,
+				768A37FADAE9B515382FD4250A6EF5C8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SQLite.swift;
+			productName = SQLite.swift;
+			productReference = E98DFC0A155BB0E2867F8F348185AEF6 /* SQLite.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 69B4198CCB52A09D7A5178C0614E6157 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A54B93D00F81B6EB5E660FD70945036 /* Pods-LiveWeatherApp */,
+				E66769F71A518C244BA813F15140A072 /* SQLite.swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E7AE97D8934995865DAD45C50439170 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				910936AEEC0D8F0ECDE5C9BD32AAC20F /* AggregateFunctions.swift in Sources */,
+				0C6DA3BDA37284356C66390AEAFB75AD /* Blob.swift in Sources */,
+				8E30A801992034262A25DF128551E031 /* Collation.swift in Sources */,
+				2159CA5F7E96E5634B62FB42809C07CE /* Connection.swift in Sources */,
+				578A546F6667598B1F190451AAC69989 /* CoreFunctions.swift in Sources */,
+				76F27712AE4DDF91AF420A2AF687C2ED /* CustomFunctions.swift in Sources */,
+				34C1A708ACDB3BC91B9C0A022D2E3731 /* Expression.swift in Sources */,
+				D9A96807652FBC899936F71F0A27E9CB /* Foundation.swift in Sources */,
+				32D3672C5698EB56F5B7BD282193765B /* FTS4.swift in Sources */,
+				27A60F73DCEC01BEFEB780E016160310 /* FTS5.swift in Sources */,
+				C6CC99F22D7E235B621A3DA051BA2298 /* Helpers.swift in Sources */,
+				E50F9CDF5CBF2F0CD6C9FA37019E6F10 /* Operators.swift in Sources */,
+				C225E65F5C197B3AF64137E65DBA3518 /* Query.swift in Sources */,
+				A9E2F5CFAFFDA18F52D1536966DCB2AD /* RTree.swift in Sources */,
+				0003EB38B2D24C6C635591210DE3411F /* Schema.swift in Sources */,
+				D4932EE0184834B0CCA1B9CDD42B62D2 /* Setter.swift in Sources */,
+				A0C00349751E399ED7D21709C91CD8A5 /* SQLite-Bridging.m in Sources */,
+				3668097F38C50A4A7F5160BCA265B793 /* SQLite.swift-dummy.m in Sources */,
+				7018BF44B3059DAD6DEF807DC4F6AB41 /* Statement.swift in Sources */,
+				6DDD0DE1C7045E692BE1C6E97110597E /* Value.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B48E6E0CF8D9E9E702E133D46AA18F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB06F980C316E64832F3E084DE888A49 /* Pods-LiveWeatherApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9CDF6290635448BAF0DE0FE8448CC38 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SQLite.swift;
+			target = E66769F71A518C244BA813F15140A072 /* SQLite.swift */;
+			targetProxy = B3A55D889FAEB64C5635FD082AA23928 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8BE1A196FD988224F7478C2927AE6BC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88BFCDC2C48A9AAC024D78C7786357F9 /* SQLite.swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLite.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SQLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A8B07BBE0B3812D684705E0233454300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88BFCDC2C48A9AAC024D78C7786357F9 /* SQLite.swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SQLite.swift/SQLite.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLite.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SQLite.swift/SQLite.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SQLite;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A9748DA78AB7299727B01FC71BD83E21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9E2A41F42AC4F6896C45F3D52B90EB1 /* Pods-LiveWeatherApp.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LiveWeatherApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LiveWeatherApp/Pods-LiveWeatherApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LiveWeatherApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C6A822537076E51489F4D8956D32720D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABB016CB45789E8FD83FAFFD66A82F4A /* Pods-LiveWeatherApp.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LiveWeatherApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-LiveWeatherApp/Pods-LiveWeatherApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LiveWeatherApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CACE7C8415F53E79F07C6BBE57F0F61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		ED4FC68AB2A4E06C718CFF338F6F156B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CACE7C8415F53E79F07C6BBE57F0F61D /* Debug */,
+				ED4FC68AB2A4E06C718CFF338F6F156B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6682837B6500E5800B693BA4824D57BB /* Build configuration list for PBXNativeTarget "Pods-LiveWeatherApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6A822537076E51489F4D8956D32720D /* Debug */,
+				A9748DA78AB7299727B01FC71BD83E21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95C22F500C6F3CCA50D677F54313CB01 /* Build configuration list for PBXNativeTarget "SQLite.swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A8B07BBE0B3812D684705E0233454300 /* Debug */,
+				8BE1A196FD988224F7478C2927AE6BC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
