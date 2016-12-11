@@ -62,12 +62,6 @@ class AddZipViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if (segue.identifier == "segueValidZip") {
-            if let destination = segue.destination as? ViewController {
-                destination.cv_zipCode.append("48176")
-                destination.cv_temp.append("23")
-                destination.cv_state.append("MI")
-                destination.cv_cityName.append("Saline")
-            }
         }
     }
     

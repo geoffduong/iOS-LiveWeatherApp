@@ -11,27 +11,35 @@ import SQLite
 
 class ViewController: UITableViewController {
     
+    
+    
     //DATABASE--------------------------------------------------
-    //let db = try Connection(":zipCode.db") throws -> String
-
+    var db : WeatherDatabase? = nil
+    //----------------------------------------------------------
+    
     //TEST ARRAYS-----------------------------------------------
     var cv_zipCode: [String] = ["48197", "85365", "99703"]
     var cv_cityName: [String] = ["Ypsilanti", "Yuma", "Fort Wainwright"]
     var cv_state: [String] = ["MI", "AZ", "AK"]
     var cv_temp: [String] = ["55", "75", "34"]
+    //----------------------------------------------------------
     
     
     
+    //Onload----------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        db = WeatherDatabase()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //----------------------------------------------------------
     
+    
+    //TableView functions---------------------------------------
     //Get number of rows for TableView
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.cv_zipCode.count
@@ -63,7 +71,8 @@ class ViewController: UITableViewController {
         controller.addAction(action)
         present(controller, animated: true, completion: nil)
     }
-
-
+    //------------------------------------------------------------
+    
+    
 }
 

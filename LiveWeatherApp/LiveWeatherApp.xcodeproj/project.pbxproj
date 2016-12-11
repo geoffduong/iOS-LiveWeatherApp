@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		67BECF0E4692FF702073DFB5 /* Pods_LiveWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B319F87C96453CA7A4B1330 /* Pods_LiveWeatherApp.framework */; };
+		67BECF0E4692FF702073DFB5 /* Pods_LiveWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B319F87C96453CA7A4B1330 /* Pods_LiveWeatherApp.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		D21BCBC41DF1E05A00033146 /* WeatherViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21BCBC31DF1E05A00033146 /* WeatherViewCell.swift */; };
 		D21BCBC61DF1E7F000033146 /* AddZipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21BCBC51DF1E7F000033146 /* AddZipViewController.swift */; };
+		D291BB961DFDF2D200817B74 /* WeatherDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D291BB951DFDF2D200817B74 /* WeatherDatabase.swift */; };
 		D2AAA8681DEE437F00EF9841 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AAA8671DEE437F00EF9841 /* AppDelegate.swift */; };
 		D2AAA86A1DEE437F00EF9841 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2AAA8691DEE437F00EF9841 /* ViewController.swift */; };
 		D2AAA86D1DEE437F00EF9841 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2AAA86B1DEE437F00EF9841 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		BF890B1D65AB00CF8371ED34 /* Pods-LiveWeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveWeatherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiveWeatherApp/Pods-LiveWeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D21BCBC31DF1E05A00033146 /* WeatherViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewCell.swift; sourceTree = "<group>"; };
 		D21BCBC51DF1E7F000033146 /* AddZipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddZipViewController.swift; sourceTree = "<group>"; };
+		D291BB951DFDF2D200817B74 /* WeatherDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDatabase.swift; sourceTree = "<group>"; };
 		D2AAA8641DEE437F00EF9841 /* LiveWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2AAA8671DEE437F00EF9841 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D2AAA8691DEE437F00EF9841 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +32,7 @@
 		D2AAA86E1DEE437F00EF9841 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D2AAA8711DEE437F00EF9841 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D2AAA8731DEE437F00EF9841 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2C6CD0F1DFCF5C90081C1C8 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = "../../../../Library/Developer/Xcode/DerivedData/LiveWeatherApp-ckyfyvvlzswuzucegpgodpjrcmiq/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 		5EDA49DA0EAAF7FCE7B1A50E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2C6CD0F1DFCF5C90081C1C8 /* SQLite.framework */,
 				5B319F87C96453CA7A4B1330 /* Pods_LiveWeatherApp.framework */,
 			);
 			name = Frameworks;
@@ -81,6 +85,7 @@
 				D2AAA8731DEE437F00EF9841 /* Info.plist */,
 				D21BCBC31DF1E05A00033146 /* WeatherViewCell.swift */,
 				D21BCBC51DF1E7F000033146 /* AddZipViewController.swift */,
+				D291BB951DFDF2D200817B74 /* WeatherDatabase.swift */,
 			);
 			path = LiveWeatherApp;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				D21BCBC41DF1E05A00033146 /* WeatherViewCell.swift in Sources */,
 				D2AAA86A1DEE437F00EF9841 /* ViewController.swift in Sources */,
 				D2AAA8681DEE437F00EF9841 /* AppDelegate.swift in Sources */,
+				D291BB961DFDF2D200817B74 /* WeatherDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
