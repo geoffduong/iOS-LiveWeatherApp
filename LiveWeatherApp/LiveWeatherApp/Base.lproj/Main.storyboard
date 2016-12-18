@@ -130,11 +130,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSs-hv-E6W">
-                                <rect key="frame" x="137" y="320" width="46" height="30"/>
+                                <rect key="frame" x="142" y="320" width="37" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Enter"/>
                                 <connections>
-                                    <segue destination="ctK-V7-rWr" kind="show" identifier="segueValidZip" id="2tN-47-vLF"/>
+                                    <segue destination="ctK-V7-rWr" kind="show" identifier="segueAddZip" id="f9N-NY-ACf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -176,6 +176,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2tN-47-vLF"/>
+        <segue reference="f9N-NY-ACf"/>
     </inferredMetricsTieBreakers>
 </document>

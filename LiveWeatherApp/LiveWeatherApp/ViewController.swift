@@ -11,10 +11,8 @@ import SQLite
 
 class ViewController: UITableViewController {
     
-    
-    
     //DATABASE--------------------------------------------------
-    var db : WeatherDatabase? = nil
+//    var db : WeatherDatabase? = nil
     //----------------------------------------------------------
     
     //TEST ARRAYS-----------------------------------------------
@@ -22,6 +20,7 @@ class ViewController: UITableViewController {
     var cv_cityName: [String] = ["Ypsilanti", "Yuma", "Fort Wainwright"]
     var cv_state: [String] = ["MI", "AZ", "AK"]
     var cv_temp: [String] = ["55", "75", "34"]
+    var cv_weatherCondition: [String] = ["Snow", "Rain", "Clear"]
     //----------------------------------------------------------
     
     
@@ -29,7 +28,11 @@ class ViewController: UITableViewController {
     //Onload----------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
-        db = WeatherDatabase()
+//        db = WeatherDatabase()
+//        db?.addZip(inputZip: "48176")
+//        let test = db?.getArray()
+//        var testZip: String = (test?[3])!
+//        print(testZip)
     }
     
     override func didReceiveMemoryWarning() {
