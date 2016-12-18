@@ -88,6 +88,9 @@
                         </textField>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="weatherTableView" destination="nB9-hA-5tq" id="7Sa-N2-cij"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Vc-gb-NLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

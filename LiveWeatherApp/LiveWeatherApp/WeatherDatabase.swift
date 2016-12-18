@@ -11,7 +11,6 @@ import SQLite
 
 class WeatherDatabase {
     var db : Connection?
-    var zipCodeArray: [String] = ["85365", "99703", "48197"]
     
     //Vars to access database
     let zipCode = Expression<String?>("zipCode")
@@ -42,32 +41,32 @@ class WeatherDatabase {
         }
     }
     
-    //Get array of zipcodes
-    func getArray() -> Array<String> {
-        return zipCodeArray
-    }
     
     //Add zipCode to database
     func addZip(inputZip: String) {
         do {
             try db?.run(users.insert(zipCode <- inputZip))
-//            if (!zipCodeArray.contains(inputZip)) {
-//                zipCodeArray.append(inputZip)
-//            }
         }
         catch {
             print(error)
         }
     }
     
-    //    func getArray() -> Array<Any> {
-    //        if let test = Array(try db?.prepare(users)) {
-    //            let lol = test
-    //            return lol
-    //        }
-    //        catch {
-    //            print(error)
-    //        }
-    //    }
+    //Return array with zip codes
+    func queryZipCodes() -> [String] {
+        do {
+            let query = try db?.prepare("SELECT zipCode FROM zipCodes")
+            var zipCodes: [String] = []
+            for zipCode in query! {
+                zipCodes += [zipCode[0] as! String]
+            }
+            return zipCodes
+            
+        }
+        catch {
+            print(error)
+        }
+        return []
+    }
     
 }

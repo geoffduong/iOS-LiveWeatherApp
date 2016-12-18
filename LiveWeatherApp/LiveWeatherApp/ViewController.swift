@@ -12,11 +12,12 @@ import SQLite
 class ViewController: UITableViewController {
     
     //DATABASE--------------------------------------------------
-//    var db : WeatherDatabase? = nil
+    var db : WeatherDatabase? = nil
     //----------------------------------------------------------
     
     //TEST ARRAYS-----------------------------------------------
-    var cv_zipCode: [String] = ["48197", "85365", "99703"]
+//    var cv_zipCode: [String] = ["48197", "85365", "99703"]
+    var cv_zipCode: [String] = []
     var cv_cityName: [String] = ["Ypsilanti", "Yuma", "Fort Wainwright"]
     var cv_state: [String] = ["MI", "AZ", "AK"]
     var cv_temp: [String] = ["55", "75", "34"]
@@ -29,11 +30,11 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("hello")
-//        db = WeatherDatabase()
-//        db?.addZip(inputZip: "48176")
-//        let test = db?.getArray()
-//        var testZip: String = (test?[3])!
-//        print(testZip)
+        db = WeatherDatabase()
+        let test = db?.queryZipCodes()
+        for zip in test! {
+            cv_zipCode.append(zip)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -76,9 +77,10 @@ class ViewController: UITableViewController {
         present(controller, animated: true, completion: nil)
     }
     //------------------------------------------------------------
+    @IBOutlet var weatherTableView: UITableView!
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
-        
+        weatherTableView.reloadData()
     }
     
     
