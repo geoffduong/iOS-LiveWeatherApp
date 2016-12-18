@@ -74,6 +74,13 @@ class AddZipViewController: UIViewController {
             //prepare(for: "segueValidZip", sender: sender)
         }
     }
+    @IBAction func btnClick(_ sender: Any) {
+        if zipToSend != nil {
+            let db: WeatherDatabase = WeatherDatabase()
+            db.addZip(inputZip: zipToSend!)
+            self.performSegue(withIdentifier: "unwindToViewController", sender: self)
+        }
+    }
     
     
     
@@ -82,18 +89,19 @@ class AddZipViewController: UIViewController {
      */
     
     //In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
-    
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if zipToSend != nil {
-            let db: WeatherDatabase = WeatherDatabase()
-            db.addZip(inputZip: zipToSend!)
-            return true
-        }
-        return false
-        
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    }
+//    
+//    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+//        if zipToSend != nil {
+//            let db: WeatherDatabase = WeatherDatabase()
+//            db.addZip(inputZip: zipToSend!)
+//            self.performSegue(withIdentifier: "unwindToViewController", sender: self)
+//            return true
+//        }
+//        return false
+//
+//    }
     
     
 }

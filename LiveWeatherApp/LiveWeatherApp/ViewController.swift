@@ -28,6 +28,7 @@ class ViewController: UITableViewController {
     //Onload----------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("hello")
 //        db = WeatherDatabase()
 //        db?.addZip(inputZip: "48176")
 //        let test = db?.getArray()
@@ -75,6 +76,10 @@ class ViewController: UITableViewController {
         present(controller, animated: true, completion: nil)
     }
     //------------------------------------------------------------
+    
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
+        
+    }
     
     
 }
