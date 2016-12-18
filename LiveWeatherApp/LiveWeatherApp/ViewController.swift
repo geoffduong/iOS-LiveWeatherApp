@@ -17,11 +17,15 @@ class ViewController: UITableViewController {
     
     //TEST ARRAYS-----------------------------------------------
 //    var cv_zipCode: [String] = ["48197", "85365", "99703"]
+//    var cv_cityName: [String] = ["Ypsilanti", "Yuma", "Fort Wainwright"]
+//    var cv_state: [String] = ["MI", "AZ", "AK"]
+//    var cv_temp: [String] = ["55", "75", "34"]
+//    var cv_weatherCondition: [String] = ["Snow", "Rain", "Clear"]
     var cv_zipCode: [String] = []
-    var cv_cityName: [String] = ["Ypsilanti", "Yuma", "Fort Wainwright"]
-    var cv_state: [String] = ["MI", "AZ", "AK"]
-    var cv_temp: [String] = ["55", "75", "34"]
-    var cv_weatherCondition: [String] = ["Snow", "Rain", "Clear"]
+    var cv_cityName: [String] = []
+    var cv_state: [String] = []
+    var cv_temp: [String] = []
+    var cv_weatherCondition: [String] = []
     //----------------------------------------------------------
     
     
@@ -30,11 +34,11 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("hello")
-        db = WeatherDatabase()
-        let test = db?.queryZipCodes()
-        for zip in test! {
-            cv_zipCode.append(zip)
-        }
+        let owm_url = URL(string: "http://api.openweathermap.org/data/2.5/weather?zip=48176,us&appid=d5bf1afd8b284f2ac9ea60d9d5a2557e&units=imperial")!
+        let owm_data : Data = try! Data(contentsOf: owm_url)
+        let owm_json = try! JSONSerialization.jsonObject(with: owm_data, options: .allowFragments) as! [String:AnyObject]
+        print(owm_json)
+        updateWeatherTable()
     }
     
     override func didReceiveMemoryWarning() {
@@ -79,10 +83,56 @@ class ViewController: UITableViewController {
     //------------------------------------------------------------
     @IBOutlet var weatherTableView: UITableView!
     
+    
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
+        //updateWeatherTable()
         weatherTableView.reloadData()
     }
     
-    
+    func updateWeatherTable() {
+        db = WeatherDatabase()
+        let test = db?.queryZipCodes()
+        for zip in test! {
+            
+            //Append to zip code array
+            cv_zipCode.append(zip)
+            
+            //Append to states and cities array
+            let zip_url = URL(string: "http://ziptasticapi.com/\(zip)")!
+            let zip_data : Data = try! Data(contentsOf: zip_url)
+            let zip_json = try! JSONSerialization.jsonObject(with: zip_data, options:.allowFragments) as! [String:AnyObject]
+            let zip_state = zip_json["state"] as! String
+            let zip_city = zip_json["city"] as! String
+            cv_state.append(zip_state)
+            cv_cityName.append(zip_city)
+            
+            //Append to temperature and weather condition array
+            let owm_url = URL(string: "http://api.openweathermap.org/data/2.5/weather?zip=\(zip),us&appid=d5bf1afd8b284f2ac9ea60d9d5a2557e&units=imperial")!
+            let owm_data : Data = try! Data(contentsOf: owm_url)
+            let owm_json = try! JSONSerialization.jsonObject(with: owm_data, options: .allowFragments) as! [String: AnyObject]
+            
+            if let json = owm_json as? [String: AnyObject] {
+                if let main = json["main"] as? [String: AnyObject] {
+                    if let temp = main["temp"] as? NSNumber {
+                        cv_temp.append(temp.description)
+                    }
+                }
+            }
+        
+//            let owm_json = try! JSONSerialization.jsonObject(with: owm_data, options: .allowFragments) as! [String:AnyObject]
+//            cv_temp.append("47")
+//            cv_weatherCondition.append("Clear")
+            
+//            if let nestedDictionary = owm_json["main"] as! [String: Any] {
+//                cv_temp.append(nestedDictionary.)
+//            }
+//
+//            if let array = owm_json["weather"] as? [String: Any] {
+//                if let weather = array.first {
+//                    cv_weatherCondition.append(weather.value as! String)
+//                }
+//            }
+        }
+    }
 }
 
