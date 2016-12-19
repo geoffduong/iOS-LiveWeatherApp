@@ -69,4 +69,13 @@ class WeatherDatabase {
         return []
     }
     
+    //Reset database
+    func resetDatabase() {
+        do {
+            try db?.run(users.delete())
+        }
+        catch {
+            print(error)
+        }
+    }
 }

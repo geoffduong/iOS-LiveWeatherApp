@@ -11,23 +11,17 @@ import SQLite
 
 class ViewController: UITableViewController {
     
-    //DATABASE--------------------------------------------------
     var db : WeatherDatabase? = nil
-    //----------------------------------------------------------
-    
-    //TEST ARRAYS-----------------------------------------------
     var cv_zipCode: [String] = []
     var cv_cityName: [String] = []
     var cv_state: [String] = []
     var cv_temp: [String] = []
     var cv_weatherCondition: [String] = []
-    //----------------------------------------------------------
     
     
-    
-    //Onload----------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.toolbar.barTintColor = UIColor.init(red: 26/255, green: 152/255, blue: 252/255, alpha: 1.0)
         updateWeatherTable()
     }
     
@@ -35,10 +29,8 @@ class ViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //----------------------------------------------------------
     
     
-    //TableView functions---------------------------------------
     //Get number of rows for TableView
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.cv_zipCode.count
@@ -61,18 +53,30 @@ class ViewController: UITableViewController {
         return 96
     }
     
-    //When cell is tapped
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let rowValue = cv_zipCode[(indexPath as NSIndexPath).row]
-        let message = "You selected \(rowValue)"
-        let controller = UIAlertController(title: "Row Selected", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Yes I Did", style: .default, handler: nil)
-        controller.addAction(action)
-        present(controller, animated: true, completion: nil)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "segueDetailedInfo") {
+            if let destination = segue.destination as? DetailedViewController {
+                if let lv_index = weatherTableView.indexPathForSelectedRow {
+                    destination.cv_weatherCondition = cv_weatherCondition[(lv_index as NSIndexPath).row]
+                    destination.cv_city = cv_cityName[(lv_index as NSIndexPath).row]
+                    destination.cv_state = cv_state[(lv_index as NSIndexPath).row]
+                    destination.cv_temp = cv_temp[(lv_index as NSIndexPath).row]
+                }
+            }
+        }
     }
-    //------------------------------------------------------------
-    @IBOutlet var weatherTableView: UITableView!
     
+    @IBOutlet var weatherTableView: UITableView!
+    @IBAction func resetDatabase(_ sender: UIBarButtonItem) {
+        db?.resetDatabase()
+        cv_temp.removeAll()
+        cv_weatherCondition.removeAll()
+        cv_state.removeAll()
+        cv_zipCode.removeAll()
+        cv_cityName.removeAll()
+        updateWeatherTable()
+        weatherTableView.reloadData()
+    }
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){
         cv_temp.removeAll()
