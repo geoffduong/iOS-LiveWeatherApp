@@ -17,6 +17,7 @@ class ViewController: UITableViewController {
     var cv_state: [String] = []
     var cv_temp: [String] = []
     var cv_weatherCondition: [String] = []
+    var deleteZipIndexPath: IndexPath? = nil
     
     
     override func viewDidLoad() {
@@ -28,6 +29,58 @@ class ViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deleteZipIndexPath = indexPath
+            let zipToDelete = cv_zipCode[indexPath.row]
+            confirmDelete(zip: zipToDelete)
+        }
+    }
+    
+    func confirmDelete(zip: String) {
+        let alert = UIAlertController(title: "Delete Zip Code", message: "Are you sure you want to permanently delete \(zip)?", preferredStyle: .actionSheet)
+        
+        let DeleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: handleDeleteZip)
+        let CancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: cancelDeleteZip)
+        
+        alert.addAction(DeleteAction)
+        alert.addAction(CancelAction)
+        
+        // Support display in iPad
+        alert.popoverPresentationController?.sourceView = self.view
+        alert.popoverPresentationController?.sourceRect = CGRectMake(self.view.bounds.size.width / 2.0, self.view.bounds.size.height / 2.0, 1.0, 1.0)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func handleDeleteZip(alertAction: UIAlertAction!) -> Void {
+        if let indexPath = deleteZipIndexPath {
+            weatherTableView.beginUpdates()
+            
+            db?.removeZip(zip: cv_zipCode[indexPath.row])
+            
+            cv_zipCode.remove(at: indexPath.row)
+            cv_temp.remove(at: indexPath.row)
+            cv_state.remove(at: indexPath.row)
+            cv_cityName.remove(at: indexPath.row)
+            cv_weatherCondition.remove(at: indexPath.row)
+            
+            // Note that indexPath is wrapped in an array:  [indexPath]
+            weatherTableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            deleteZipIndexPath = nil
+            
+            weatherTableView.endUpdates()
+        }
+    }
+    
+    func cancelDeleteZip(alertAction: UIAlertAction!) {
+        deleteZipIndexPath = nil
+    }
+    
+    func CGRectMake(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) -> CGRect {
+        return CGRect(x: x, y: y, width: width, height: height)
     }
     
     

@@ -17,7 +17,7 @@ class DetailedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lbl_weatherPicture.font = UIFont(name: "WeatherIcons", size: 100)
+        lbl_weatherPicture.font = UIFont(name: "WeatherIcons", size: 150)
         switch (cv_weatherCondition!) {
         case "Clear":
             lbl_weatherPicture.text = "J"

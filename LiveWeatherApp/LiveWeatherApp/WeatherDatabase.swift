@@ -31,10 +31,12 @@ class WeatherDatabase {
                 t.column(zipCode, unique: true)
             })
             
-            //TEST: Adding to database
-            try db?.run(users.insert(zipCode <- "85365"))
-            try db?.run(users.insert(zipCode <- "99703"))
-            try db?.run(users.insert(zipCode <- "48197"))
+            let count = try db?.scalar(users.count)
+            if count == 0 {
+                try db?.run(users.insert(zipCode <- "85365"))
+                try db?.run(users.insert(zipCode <- "99703"))
+                try db?.run(users.insert(zipCode <- "48197"))
+            }
         }
         catch {
             print(error)
@@ -73,6 +75,17 @@ class WeatherDatabase {
     func resetDatabase() {
         do {
             try db?.run(users.delete())
+        }
+        catch {
+            print(error)
+        }
+    }
+    
+    //Remove zip code
+    func removeZip(zip: String) {
+        do {
+            let index = users.filter(zipCode == zip)
+            try db?.run(index.delete())
         }
         catch {
             print(error)
